@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPoint 2 - Flexbox & Layout Website</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* 1. NAVBAR (FLEXBOX HORIZONAL) */
+    .navbar {
+      display: flex;                   /* Mengaktifkan Flexbox */
+      justify-content: space-between; /* Logo di kiri, menu di kanan */
+      align-items: center;            /* Sejajar secara vertikal */
+      background-color: #1B1F3B;
+      padding: 16px 32px;
+      color: white;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #E86A33;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;                       /* Jarak antar item menu */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* 2. HERO SECTION (FLEXBOX VERTIKAL / COLUMN) */
+    .hero {
+      display: flex;
+      flex-direction: column;         /* Menyusun bertumpuk ke bawah */
+      align-items: center;            /* Berpusat horizontal */
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #ffffff;
+      gap: 12px;                      /* Jarak antar judul, paragraf, & tombol */
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #1B1F3B;
+    }
+
+    .hero p {
+      color: #666;
+      max-width: 500px;
+      margin: 0;
+    }
+
+    .hero button {
+      background-color: #E86A33;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* 3. CONTENT & CARD GRID (FLEXBOX WRAP) */
+    .content-container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content-container h2 {
+      text-align: center;
+      color: #1B1F3B;
+      margin-bottom: 24px;
+    }
+
+    .cards-grid {
+      display: flex;
+      gap: 16px;                     /* Jarak seragam antar card */
+      flex-wrap: wrap;               /* Melipat ke baris baru jika layar sempit */
+      justify-content: center;
+    }
+
+    .card-item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 240px;                  /* Lebar card tetap */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card-item h3 {
+      margin-top: 0;
+      color: #E86A33;
+    }
+
+    /* 4. FOOTER (FLEXBOX HORIZONAL) */
+    footer {
+      display: flex;
+      justify-content: space-between; /* Hak cipta di kiri, sosmed di kanan */
+      align-items: center;
+      background-color: #1B1F3B;
+      color: white;
+      padding: 20px 32px;
+      font-size: 14px;
+    }
+
+    .sosmed {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sosmed a {
+      color: #E86A33;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">LogoKu</div>
+    <ul class="menu">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Produk</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Selamat Datang di Situs Kami</h1>
+    <p>Bangun layout website modern dan responsif dengan mudah menggunakan CSS Flexbox.</p>
+    <button>Mulai Sekarang</button>
+  </section>
+
+  <!-- CONTENT SECTION (CARD GRID) -->
+  <main class="content-container">
+    <h2>Layanan Kami</h2>
+    <div class="cards-grid">
+      <div class="card-item">
+        <h3>Layanan 1</h3>
+        <p>Deskripsi singkat mengenai layanan pertama yang kami tawarkan.</p>
+      </div>
+      <div class="card-item">
+        <h3>Layanan 2</h3>
+        <p>Deskripsi singkat mengenai layanan kedua yang kami tawarkan.</p>
+      </div>
+      <div class="card-item">
+        <h3>Layanan 3</h3>
+        <p>Deskripsi singkat mengenai layanan ketiga yang kami tawarkan.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Situs Kami. All rights reserved.</p>
+    <ul class="sosmed">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Email</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

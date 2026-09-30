@@ -1,0 +1,104 @@
+<!DOCTYPE1 html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPoint 1 - CSS Dasar & Box Model</title>
+  <style>
+    /* CSS DASAR & TIPOGRAFI */
+    body {
+      font-family: "Arial", sans-serif; /* font-family */
+      background-color: #f4f6f8;       /* background-color */
+      color: #333333;                   /* color */
+      margin: 0;
+      padding: 20px;
+    }
+
+    .judul-utama {
+      color: #E86A33;
+      text-align: center; /* text-align */
+      font-size: 28px;    /* font-size */
+      font-weight: 700;   /* font-weight */
+    }
+
+    /* CARA MENULIS CSS: INTERNAL CSS ADA DI SINI, INLINE ADA DI HTML */
+
+    /* STYLING BOX MODEL & CARD (TOPIK 2) */
+    .card-container {
+      display: block;
+      margin: 30px auto;
+      max-width: 400px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      width: 300px;           /* width */
+      padding: 24px;          /* padding */
+      margin: 0 auto;         /* margin */
+      border: 2px solid #1B1F3B; /* border */
+      border-radius: 16px;    /* border-radius */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* box-shadow */
+      text-align: left;
+    }
+
+    .card h3 {
+      color: #E86A33;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .tombol-card {
+      background-color: #E86A33;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px; /* border-radius */
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* CONTOH LINGKARAN SEMPURNA */
+    .avatar {
+      width: 60px;
+      height: 60px;
+      background-color: #1B1F3B;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 50%; /* 50% membuat lingkaran */
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="judul-utama">PowerPoint 1: CSS Dasar & Box Model</h1>
+
+  <!-- CONTOH INLINE CSS -->
+  <p style="text-align: center; color: #666; font-size: 16px;">
+    Paragraf ini menggunakan <strong style="color: red;">Inline CSS</strong> langsung di tag HTML.
+  </p>
+
+  <!-- STUDI KASUS STYLING CARD (BOX MODEL) -->
+  <div class="card-container">
+    <div class="card">
+      <div class="avatar">CSS</div>
+      <h3>Belajar CSS & Box Model</h3>
+      <p>
+        Kartu ini disusun dari kombinasi properti <strong>content</strong>, <strong>padding</strong>, 
+        <strong>border</strong>, <strong>margin</strong>, <strong>border-radius</strong>, dan <strong>box-shadow</strong>.
+      </p>
+      <button class="tombol-card">Mulai Belajar</button>
+    </div>
+  </div>
+
+</body>
+</html>
